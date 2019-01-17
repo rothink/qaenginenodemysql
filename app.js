@@ -31,6 +31,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./src/index')(app);
+require('./src/models/index');
 
 app.listen(
     app.get('PORT'), app.get('HOST'), () => console.info(`Express start http://${app.get('HOST')}:${app.get('PORT')} ENV ${app.get('NODE_ENV')}`));
