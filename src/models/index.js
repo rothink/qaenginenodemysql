@@ -10,7 +10,7 @@ const db = {};
 if (ENV === 'production') {
     sequelize = new Sequelize('mysql://USERNAME:PASSWORD@HOST:PORT:/DB_NAME', { operatorsAliases: Sequelize.Op });
 } else {
-    sequelize = new Sequelize('mysql://root:root@localhost:3306:/qa', { operatorsAliases: Sequelize.Op });
+    sequelize = new Sequelize('mysql://root:root@localhost:3306/qa', { operatorsAliases: Sequelize.Op });
 }
 
 fs
